@@ -39,7 +39,7 @@
         <p class="font-weight-bold hotline text-20 text-bold m-0"> 0825 233 233 </p>
       </div>
 
-      <div class="align-items-center cart d-flex flex-column mt25 position-relative">
+      <div class="align-items-center cart d-flex flex-column mt25 position-relative" *ngIf="role=='ROLE_USER'">
         <a href="http://localhost:4200/product/shopping-cart">
           <i class="fa fa-shopping-cart text-24 red" aria-hidden="true"></i>
         </a>

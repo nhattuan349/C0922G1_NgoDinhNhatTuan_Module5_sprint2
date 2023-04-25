@@ -8,6 +8,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
+
 @NgModule({
   declarations: [ProductListComponent, ProductCreateComponent, ShoppingCartComponent],
   imports: [
