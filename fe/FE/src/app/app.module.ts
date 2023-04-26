@@ -9,6 +9,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 
+import {environment} from '../environments/environment';
+import {AngularFireStorageModule} from '@angular/fire/storage';
+import {AngularFireModule} from '@angular/fire';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +26,9 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    AngularFireStorageModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]

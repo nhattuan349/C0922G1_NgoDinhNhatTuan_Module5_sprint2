@@ -14,7 +14,7 @@ public class Product {
     private Integer productPrice;
     private String description;
     private String productImage;
-    private String productPromotionalPrice;
+    private Integer productPromotionalPrice;
     private Boolean productFlagDelete;
 
     @ManyToOne
@@ -24,7 +24,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long productId, String productCode, Integer productQuantity, String productName, Integer productPrice, String description, String productImage, String productPromotionalPrice, Boolean productFlagDelete, ProductType productType) {
+    public Product(Long productId, String productCode, Integer productQuantity, String productName, Integer productPrice, String description, String productImage, Integer productPromotionalPrice, Boolean productFlagDelete, ProductType productType) {
         this.productId = productId;
         this.productCode = productCode;
         this.productQuantity = productQuantity;
@@ -93,11 +93,11 @@ public class Product {
         this.productImage = productImage;
     }
 
-    public String getProductPromotionalPrice() {
+    public Integer getProductPromotionalPrice() {
         return productPromotionalPrice;
     }
 
-    public void setProductPromotionalPrice(String productPromotionalPrice) {
+    public void setProductPromotionalPrice(Integer productPromotionalPrice) {
         this.productPromotionalPrice = productPromotionalPrice;
     }
 

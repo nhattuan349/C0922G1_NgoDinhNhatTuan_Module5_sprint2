@@ -1,7 +1,7 @@
 package com.example.be.config;
 
 import com.example.be.jwt.JwtFilter;
-import com.example.be.service.AccountDetailService;
+import com.example.be.service.impl.AccountDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

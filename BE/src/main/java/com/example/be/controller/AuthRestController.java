@@ -1,7 +1,7 @@
 package com.example.be.controller;
 
 import com.example.be.dto.ChangePasswordDto;
-import com.example.be.service.AccountService;
+import com.example.be.service.impl.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
