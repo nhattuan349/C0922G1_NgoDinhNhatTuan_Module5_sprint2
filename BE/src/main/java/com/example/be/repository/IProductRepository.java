@@ -1,12 +1,15 @@
 package com.example.be.repository;
 
 import com.example.be.dto.IProductDto;
+import com.example.be.dto.IProductImage;
 import com.example.be.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+
+import java.util.List;
 
 public interface IProductRepository extends JpaRepository<Product, Long> {
 
@@ -45,4 +48,20 @@ public interface IProductRepository extends JpaRepository<Product, Long> {
             nativeQuery = true
     )
     Page<IProductDto> findAllProductDto(@Param("keySearch1") String keySearch1, Pageable pageable);
+
+
+    @Query(value = "select * from `product` where `product`.product_id =:id",nativeQuery = true)
+    Product findProductDetailById(@Param("id") int id);
+
+    @Query(value =
+            "select " +
+                    "`images`.image_name as imageName, " +
+                    "`images`.image as image " +
+                    "from `images` " +
+                    "where `images`.product_id =:id",nativeQuery = true)
+    List<IProductImage> getProductImageList(@Param("id") int id);
+
 }
+
+
+

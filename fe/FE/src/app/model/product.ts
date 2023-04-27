@@ -8,7 +8,7 @@ export interface Product {
   productPrice?: number;
   description?: string;
   productImage?: string;
-  productPromotionalPrice?: string;
+  productPromotionalPrice?: number;
   productFlagDelete?: boolean;
   productTypeId?: ProductType;
 

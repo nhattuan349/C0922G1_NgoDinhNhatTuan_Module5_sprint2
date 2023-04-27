@@ -7,9 +7,10 @@ import javax.persistence.*;
 public class Images {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "order_detail_id")
+    @Column(name = "image_id")
     private Long imageId;
     private String imageName;
+    private String image;
 
     @ManyToOne
     @JoinColumn(name = "product_id",referencedColumnName = "product_id")
@@ -18,9 +19,11 @@ public class Images {
     public Images() {
     }
 
-    public Images(Long imageId, String imageName) {
+    public Images(Long imageId, String imageName, String image, Product product) {
         this.imageId = imageId;
         this.imageName = imageName;
+        this.image = image;
+        this.product = product;
     }
 
     public Long getImageId() {
@@ -45,5 +48,13 @@ public class Images {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
